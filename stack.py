@@ -1,5 +1,6 @@
 from collections import deque
 
+#last in first out (LIFO)
 stack = deque()
 
 for i in range(0,5):

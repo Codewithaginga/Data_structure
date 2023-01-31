@@ -4,7 +4,7 @@ pos = -1
 def binary(list, n):
 
     l = 0 #lower bound starts from zero
-    u = len(list)-1 # we are using interger division
+    u = len(list)-1 # we are using interger division upper bond
 
     while l <= u:
 
@@ -12,16 +12,17 @@ def binary(list, n):
 
         if list[mid] == n:
             
-            globals() ['pos'] = mid
+            globals() ['pos'] = mid #positioning
             return True
 
         else:
             if list[mid] < n:
-                l = mid # lower bounds becomes the mid value
+                l = mid + 1 # lower bounds becomes the mid value
 
             else:
-                u = mid
+                u = mid - 1
 
+    return True
 
 list = [4, 7, 8, 12, 45, 99]
 
